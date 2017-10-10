@@ -3,6 +3,7 @@ import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 
 import HomeHeader from '../../components/HomeHeader'
+import Ad from './subpage/Ad'
 
 class Home extends React.Component {
     constructor(props, context) {
@@ -14,7 +15,11 @@ class Home extends React.Component {
         const {userinfo} = this.props;
         const {cityName} = userinfo;
         return (
-            <HomeHeader cityName={cityName}/>
+            <div>
+                <HomeHeader cityName={cityName}/>
+                <hr />
+                <Ad />
+            </div>
         )
     }
 }
